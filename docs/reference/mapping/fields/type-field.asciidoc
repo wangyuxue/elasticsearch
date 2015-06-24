@@ -1,7 +1,0 @@
-[[mapping-type-field]]
-=== `_type`
-
-Each document indexed is associated with an id and a type. The `_type`
-field allows accessing only the type of a document. It is indexed
-to allow quickly filtering on type, for example, when performing
-a search request on a single or multiple types.

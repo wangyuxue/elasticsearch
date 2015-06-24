@@ -19,7 +19,15 @@
 
 package org.elasticsearch.common.lucene;
 
-import com.google.common.collect.Iterables;
+import static org.elasticsearch.common.lucene.search.NoopCollector.NOOP_COLLECTOR;
+
+import java.io.IOException;
+import java.text.ParseException;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.List;
+import java.util.Map;
 
 import org.apache.lucene.analysis.core.KeywordAnalyzer;
 import org.apache.lucene.analysis.standard.StandardAnalyzer;
@@ -76,15 +84,7 @@ import org.elasticsearch.index.analysis.AnalyzerScope;
 import org.elasticsearch.index.analysis.NamedAnalyzer;
 import org.elasticsearch.index.fielddata.IndexFieldData;
 
-import java.io.IOException;
-import java.text.ParseException;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.List;
-import java.util.Map;
-
-import static org.elasticsearch.common.lucene.search.NoopCollector.NOOP_COLLECTOR;
+import com.google.common.collect.Iterables;
 
 /**
  *
@@ -142,7 +142,14 @@ public class Lucene {
         for (SegmentCommitInfo info : infos) {
             list.add(info.files());
         }
-        return Iterables.concat(list.toArray(new Collection[0]));
+        Collection<String> tmp = list
+                .stream()
+                .reduce(new ArrayList<String>(0), 
+                (Collection<String> r, Collection<String> c) -> {
+                	r.addAll(c); 
+                	return r;
+                });
+        return Iterables.concat(tmp);
     }
 
     /**

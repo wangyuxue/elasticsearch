@@ -208,7 +208,7 @@ public class Bootstrap {
         Terminal terminal = foreground ? Terminal.DEFAULT : null;
         return InternalSettingsPreparer.prepareSettings(EMPTY_SETTINGS, true, terminal);
     }
-
+  
     private void start() {
         node.start();
         keepAliveThread.start();
