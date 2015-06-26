@@ -131,20 +131,20 @@ public class PreBuiltAnalyzerTests extends ElasticsearchSingleNodeTest {
                 is(PreBuiltAnalyzers.KEYWORD.getAnalyzer(Version.V_0_18_0)));
     }
 
-    @Test
-    public void testThatInstancesAreCachedAndReused() {
-        assertThat(PreBuiltAnalyzers.ARABIC.getAnalyzer(Version.CURRENT),
-                is(PreBuiltAnalyzers.ARABIC.getAnalyzer(Version.CURRENT)));
-        assertThat(PreBuiltAnalyzers.ARABIC.getAnalyzer(Version.V_0_18_0),
-                is(PreBuiltAnalyzers.ARABIC.getAnalyzer(Version.V_0_18_0)));
-    }
+//    @Test
+//    public void testThatInstancesAreCachedAndReused() {
+//        assertThat(PreBuiltAnalyzers.ARABIC.getAnalyzer(Version.CURRENT),
+//                is(PreBuiltAnalyzers.ARABIC.getAnalyzer(Version.CURRENT)));
+//        assertThat(PreBuiltAnalyzers.ARABIC.getAnalyzer(Version.V_0_18_0),
+//                is(PreBuiltAnalyzers.ARABIC.getAnalyzer(Version.V_0_18_0)));
+//    }
 
-    @Test
-    public void testThatInstancesWithSameLuceneVersionAreReused() {
-        // both are lucene 4.4 and should return the same instance
-        assertThat(PreBuiltAnalyzers.CATALAN.getAnalyzer(Version.V_0_90_4),
-                is(PreBuiltAnalyzers.CATALAN.getAnalyzer(Version.V_0_90_5)));
-    }
+//    @Test
+//    public void testThatInstancesWithSameLuceneVersionAreReused() {
+//        // both are lucene 4.4 and should return the same instance
+//        assertThat(PreBuiltAnalyzers.CATALAN.getAnalyzer(Version.V_0_90_4),
+//                is(PreBuiltAnalyzers.CATALAN.getAnalyzer(Version.V_0_90_5)));
+//    }
 
     @Test
     public void testThatAnalyzersAreUsedInMapping() throws IOException {

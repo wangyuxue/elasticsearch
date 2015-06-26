@@ -166,19 +166,19 @@ public enum PreBuiltTokenFilters {
         }
     },
 
-    KSTEM(CachingStrategy.ONE) {
-        @Override
-        public TokenStream create(TokenStream tokenStream, Version version) {
-            return new KStemFilter(tokenStream);
-        }
-    },
-
-    PORTER_STEM(CachingStrategy.ONE) {
-        @Override
-        public TokenStream create(TokenStream tokenStream, Version version) {
-            return new PorterStemFilter(tokenStream);
-        }
-    },
+//    KSTEM(CachingStrategy.ONE) {
+//        @Override
+//        public TokenStream create(TokenStream tokenStream, Version version) {
+//            return new KStemFilter(tokenStream);
+//        }
+//    },
+//
+//    PORTER_STEM(CachingStrategy.ONE) {
+//        @Override
+//        public TokenStream create(TokenStream tokenStream, Version version) {
+//            return new PorterStemFilter(tokenStream);
+//        }
+//    },
 
     STANDARD(CachingStrategy.LUCENE) {
         @Override
@@ -235,96 +235,96 @@ public enum PreBuiltTokenFilters {
     },
 
     // Extended Token Filters
-    SNOWBALL(CachingStrategy.ONE) {
-        @Override
-        public TokenStream create(TokenStream tokenStream, Version version) {
-            return new SnowballFilter(tokenStream, "English");
-        }
-    },
+//    SNOWBALL(CachingStrategy.ONE) {
+//        @Override
+//        public TokenStream create(TokenStream tokenStream, Version version) {
+//            return new SnowballFilter(tokenStream, "English");
+//        }
+//    },
+//
+//    STEMMER(CachingStrategy.ONE) {
+//        @Override
+//        public TokenStream create(TokenStream tokenStream, Version version) {
+//            return new PorterStemFilter(tokenStream);
+//        }
+//    },
+//
+//    ELISION(CachingStrategy.ONE) {
+//        @Override
+//        public TokenStream create(TokenStream tokenStream, Version version) {
+//            return new ElisionFilter(tokenStream, FrenchAnalyzer.DEFAULT_ARTICLES);
+//        }
+//    },
 
-    STEMMER(CachingStrategy.ONE) {
-        @Override
-        public TokenStream create(TokenStream tokenStream, Version version) {
-            return new PorterStemFilter(tokenStream);
-        }
-    },
+//    ARABIC_STEM(CachingStrategy.ONE) {
+//        @Override
+//        public TokenStream create(TokenStream tokenStream, Version version) {
+//            return new ArabicStemFilter(tokenStream);
+//        }
+//    },
 
-    ELISION(CachingStrategy.ONE) {
-        @Override
-        public TokenStream create(TokenStream tokenStream, Version version) {
-            return new ElisionFilter(tokenStream, FrenchAnalyzer.DEFAULT_ARTICLES);
-        }
-    },
+//    BRAZILIAN_STEM(CachingStrategy.ONE) {
+//        @Override
+//        public TokenStream create(TokenStream tokenStream, Version version) {
+//            return new BrazilianStemFilter(tokenStream);
+//        }
+//    },
 
-    ARABIC_STEM(CachingStrategy.ONE) {
-        @Override
-        public TokenStream create(TokenStream tokenStream, Version version) {
-            return new ArabicStemFilter(tokenStream);
-        }
-    },
-
-    BRAZILIAN_STEM(CachingStrategy.ONE) {
-        @Override
-        public TokenStream create(TokenStream tokenStream, Version version) {
-            return new BrazilianStemFilter(tokenStream);
-        }
-    },
-
-    CZECH_STEM(CachingStrategy.ONE) {
-        @Override
-        public TokenStream create(TokenStream tokenStream, Version version) {
-            return new CzechStemFilter(tokenStream);
-        }
-    },
-
-    DUTCH_STEM(CachingStrategy.ONE) {
-        @Override
-        public TokenStream create(TokenStream tokenStream, Version version) {
-            return new SnowballFilter(tokenStream, new DutchStemmer());
-        }
-    },
-
-    FRENCH_STEM(CachingStrategy.ONE) {
-        @Override
-        public TokenStream create(TokenStream tokenStream, Version version) {
-            return new SnowballFilter(tokenStream, new FrenchStemmer());
-        }
-    },
-
-    GERMAN_STEM(CachingStrategy.ONE) {
-        @Override
-        public TokenStream create(TokenStream tokenStream, Version version) {
-            return new GermanStemFilter(tokenStream);
-        }
-    },
-
-    RUSSIAN_STEM(CachingStrategy.ONE) {
-        @Override
-        public TokenStream create(TokenStream tokenStream, Version version) {
-            return new SnowballFilter(tokenStream, "Russian");
-        }
-    },
-
-    KEYWORD_REPEAT(CachingStrategy.ONE) {
-        @Override
-        public TokenStream create(TokenStream tokenStream, Version version) {
-            return new KeywordRepeatFilter(tokenStream);
-        }
-    },
-
-    ARABIC_NORMALIZATION(CachingStrategy.ONE) {
-        @Override
-        public TokenStream create(TokenStream tokenStream, Version version) {
-            return new ArabicNormalizationFilter(tokenStream);
-        }
-    },
-
-    PERSIAN_NORMALIZATION(CachingStrategy.ONE) {
-        @Override
-        public TokenStream create(TokenStream tokenStream, Version version) {
-            return new PersianNormalizationFilter(tokenStream);
-        }
-    },
+//    CZECH_STEM(CachingStrategy.ONE) {
+//        @Override
+//        public TokenStream create(TokenStream tokenStream, Version version) {
+//            return new CzechStemFilter(tokenStream);
+//        }
+//    },
+//
+//    DUTCH_STEM(CachingStrategy.ONE) {
+//        @Override
+//        public TokenStream create(TokenStream tokenStream, Version version) {
+//            return new SnowballFilter(tokenStream, new DutchStemmer());
+//        }
+//    },
+//
+//    FRENCH_STEM(CachingStrategy.ONE) {
+//        @Override
+//        public TokenStream create(TokenStream tokenStream, Version version) {
+//            return new SnowballFilter(tokenStream, new FrenchStemmer());
+//        }
+//    },
+//
+//    GERMAN_STEM(CachingStrategy.ONE) {
+//        @Override
+//        public TokenStream create(TokenStream tokenStream, Version version) {
+//            return new GermanStemFilter(tokenStream);
+//        }
+//    },
+//
+//    RUSSIAN_STEM(CachingStrategy.ONE) {
+//        @Override
+//        public TokenStream create(TokenStream tokenStream, Version version) {
+//            return new SnowballFilter(tokenStream, "Russian");
+//        }
+//    },
+//
+//    KEYWORD_REPEAT(CachingStrategy.ONE) {
+//        @Override
+//        public TokenStream create(TokenStream tokenStream, Version version) {
+//            return new KeywordRepeatFilter(tokenStream);
+//        }
+//    },
+//
+//    ARABIC_NORMALIZATION(CachingStrategy.ONE) {
+//        @Override
+//        public TokenStream create(TokenStream tokenStream, Version version) {
+//            return new ArabicNormalizationFilter(tokenStream);
+//        }
+//    },
+//
+//    PERSIAN_NORMALIZATION(CachingStrategy.ONE) {
+//        @Override
+//        public TokenStream create(TokenStream tokenStream, Version version) {
+//            return new PersianNormalizationFilter(tokenStream);
+//        }
+//    },
 
     TYPE_AS_PAYLOAD(CachingStrategy.ONE) {
         @Override
@@ -340,54 +340,54 @@ public enum PreBuiltTokenFilters {
         }
     },
 
-    GERMAN_NORMALIZATION(CachingStrategy.ONE) {
-        @Override
-        public TokenStream create(TokenStream tokenStream, Version version) {
-            return new GermanNormalizationFilter(tokenStream);
-        }
-    },
-
-    HINDI_NORMALIZATION(CachingStrategy.ONE) {
-        @Override
-        public TokenStream create(TokenStream tokenStream, Version version) {
-            return new HindiNormalizationFilter(tokenStream);
-        }
-    },
-
-    INDIC_NORMALIZATION(CachingStrategy.ONE) {
-        @Override
-        public TokenStream create(TokenStream tokenStream, Version version) {
-            return new IndicNormalizationFilter(tokenStream);
-        }
-    },
-
-    SORANI_NORMALIZATION(CachingStrategy.ONE) {
-        @Override
-        public TokenStream create(TokenStream tokenStream, Version version) {
-            return new SoraniNormalizationFilter(tokenStream);
-        }
-    },
-
-    SCANDINAVIAN_NORMALIZATION(CachingStrategy.ONE) {
-        @Override
-        public TokenStream create(TokenStream tokenStream, Version version) {
-            return new ScandinavianNormalizationFilter(tokenStream);
-        }
-    },
-
-    SCANDINAVIAN_FOLDING(CachingStrategy.ONE) {
-        @Override
-        public TokenStream create(TokenStream tokenStream, Version version) {
-            return new ScandinavianFoldingFilter(tokenStream);
-        }
-    },
-
-    APOSTROPHE(CachingStrategy.ONE) {
-        @Override
-        public TokenStream create(TokenStream tokenStream, Version version) {
-            return new ApostropheFilter(tokenStream);
-        }
-    },
+//    GERMAN_NORMALIZATION(CachingStrategy.ONE) {
+//        @Override
+//        public TokenStream create(TokenStream tokenStream, Version version) {
+//            return new GermanNormalizationFilter(tokenStream);
+//        }
+//    },
+//
+//    HINDI_NORMALIZATION(CachingStrategy.ONE) {
+//        @Override
+//        public TokenStream create(TokenStream tokenStream, Version version) {
+//            return new HindiNormalizationFilter(tokenStream);
+//        }
+//    },
+//
+//    INDIC_NORMALIZATION(CachingStrategy.ONE) {
+//        @Override
+//        public TokenStream create(TokenStream tokenStream, Version version) {
+//            return new IndicNormalizationFilter(tokenStream);
+//        }
+//    },
+//
+//    SORANI_NORMALIZATION(CachingStrategy.ONE) {
+//        @Override
+//        public TokenStream create(TokenStream tokenStream, Version version) {
+//            return new SoraniNormalizationFilter(tokenStream);
+//        }
+//    },
+//
+//    SCANDINAVIAN_NORMALIZATION(CachingStrategy.ONE) {
+//        @Override
+//        public TokenStream create(TokenStream tokenStream, Version version) {
+//            return new ScandinavianNormalizationFilter(tokenStream);
+//        }
+//    },
+//
+//    SCANDINAVIAN_FOLDING(CachingStrategy.ONE) {
+//        @Override
+//        public TokenStream create(TokenStream tokenStream, Version version) {
+//            return new ScandinavianFoldingFilter(tokenStream);
+//        }
+//    },
+//
+//    APOSTROPHE(CachingStrategy.ONE) {
+//        @Override
+//        public TokenStream create(TokenStream tokenStream, Version version) {
+//            return new ApostropheFilter(tokenStream);
+//        }
+//    },
 
     CJK_WIDTH(CachingStrategy.ONE) {
         @Override

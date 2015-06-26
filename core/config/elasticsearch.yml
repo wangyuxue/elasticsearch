@@ -14,13 +14,13 @@
 #
 # Use a descriptive name for your cluster:
 #
-# cluster.name: my-application
+cluster.name: research_es
 #
 # ------------------------------------ Node ------------------------------------
 #
 # Use a descriptive name for the node:
 #
-# node.name: node-1
+node.name: local
 #
 # Add custom attributes to the node:
 #
@@ -30,11 +30,11 @@
 #
 # Path to directory where to store the data (separate multiple locations by comma):
 #
-# path.data: /path/to/data
+path.data: /Users/odile/baidu/es_data
 #
 # Path to log files:
 #
-# path.logs: /path/to/logs
+path.logs: /Users/odile/baidu/es_datalogs
 #
 # ----------------------------------- Memory -----------------------------------
 #
@@ -92,8 +92,12 @@
 #
 # Disable starting multiple nodes on a single system:
 #
-# node.max_local_storage_nodes: 1
+node.max_local_storage_nodes: 1
 #
 # Require explicit names when deleting indices:
 #
 # action.destructive_requires_name: true
+node.master: true
+node.data: true
+index.number_of_replicas: 1
+

@@ -3,7 +3,7 @@ es.logger.level: INFO
 rootLogger: ${es.logger.level}, console, file
 logger:
   # log action execution errors for easier debugging
-  action: DEBUG
+  action: INFO
 
   # deprecation logging, turn to DEBUG to see them
   deprecation: INFO, deprecation_log_file
@@ -13,21 +13,21 @@ logger:
   org.apache.http: INFO
 
   # gateway
-  #gateway: DEBUG
-  #index.gateway: DEBUG
+  gateway: INFO
+  index.gateway: INFO
 
   # peer shard recovery
-  #indices.recovery: DEBUG
+  indices.recovery: INFO
 
   # discovery
-  #discovery: TRACE
+  discovery: INFO
 
   index.search.slowlog: TRACE, index_search_slow_log_file
   index.indexing.slowlog: TRACE, index_indexing_slow_log_file
 
 additivity:
-  index.search.slowlog: false
-  index.indexing.slowlog: false
+  index.search.slowlog: true
+  index.indexing.slowlog: true
   deprecation: false
 
 appender:

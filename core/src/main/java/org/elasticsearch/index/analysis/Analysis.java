@@ -24,38 +24,38 @@ import com.google.common.collect.ImmutableMap;
 import org.apache.lucene.analysis.Analyzer;
 import org.apache.lucene.analysis.NumericTokenStream;
 import org.apache.lucene.analysis.TokenStream;
-import org.apache.lucene.analysis.ar.ArabicAnalyzer;
-import org.apache.lucene.analysis.bg.BulgarianAnalyzer;
-import org.apache.lucene.analysis.br.BrazilianAnalyzer;
-import org.apache.lucene.analysis.ca.CatalanAnalyzer;
-import org.apache.lucene.analysis.ckb.SoraniAnalyzer;
-import org.apache.lucene.analysis.cz.CzechAnalyzer;
-import org.apache.lucene.analysis.da.DanishAnalyzer;
-import org.apache.lucene.analysis.de.GermanAnalyzer;
-import org.apache.lucene.analysis.el.GreekAnalyzer;
+//import org.apache.lucene.analysis.ar.ArabicAnalyzer;
+//import org.apache.lucene.analysis.bg.BulgarianAnalyzer;
+//import org.apache.lucene.analysis.br.BrazilianAnalyzer;
+//import org.apache.lucene.analysis.ca.CatalanAnalyzer;
+//import org.apache.lucene.analysis.ckb.SoraniAnalyzer;
+//import org.apache.lucene.analysis.cz.CzechAnalyzer;
+//import org.apache.lucene.analysis.da.DanishAnalyzer;
+//import org.apache.lucene.analysis.de.GermanAnalyzer;
+//import org.apache.lucene.analysis.el.GreekAnalyzer;
 import org.apache.lucene.analysis.en.EnglishAnalyzer;
-import org.apache.lucene.analysis.es.SpanishAnalyzer;
-import org.apache.lucene.analysis.eu.BasqueAnalyzer;
-import org.apache.lucene.analysis.fa.PersianAnalyzer;
-import org.apache.lucene.analysis.fi.FinnishAnalyzer;
-import org.apache.lucene.analysis.fr.FrenchAnalyzer;
-import org.apache.lucene.analysis.ga.IrishAnalyzer;
-import org.apache.lucene.analysis.gl.GalicianAnalyzer;
-import org.apache.lucene.analysis.hi.HindiAnalyzer;
-import org.apache.lucene.analysis.hu.HungarianAnalyzer;
-import org.apache.lucene.analysis.hy.ArmenianAnalyzer;
-import org.apache.lucene.analysis.id.IndonesianAnalyzer;
-import org.apache.lucene.analysis.it.ItalianAnalyzer;
-import org.apache.lucene.analysis.lv.LatvianAnalyzer;
-import org.apache.lucene.analysis.nl.DutchAnalyzer;
-import org.apache.lucene.analysis.no.NorwegianAnalyzer;
-import org.apache.lucene.analysis.pt.PortugueseAnalyzer;
-import org.apache.lucene.analysis.ro.RomanianAnalyzer;
-import org.apache.lucene.analysis.ru.RussianAnalyzer;
-import org.apache.lucene.analysis.sv.SwedishAnalyzer;
-import org.apache.lucene.analysis.th.ThaiAnalyzer;
+//import org.apache.lucene.analysis.es.SpanishAnalyzer;
+//import org.apache.lucene.analysis.eu.BasqueAnalyzer;
+//import org.apache.lucene.analysis.fa.PersianAnalyzer;
+//import org.apache.lucene.analysis.fi.FinnishAnalyzer;
+//import org.apache.lucene.analysis.fr.FrenchAnalyzer;
+//import org.apache.lucene.analysis.ga.IrishAnalyzer;
+//import org.apache.lucene.analysis.gl.GalicianAnalyzer;
+//import org.apache.lucene.analysis.hi.HindiAnalyzer;
+//import org.apache.lucene.analysis.hu.HungarianAnalyzer;
+//import org.apache.lucene.analysis.hy.ArmenianAnalyzer;
+//import org.apache.lucene.analysis.id.IndonesianAnalyzer;
+//import org.apache.lucene.analysis.it.ItalianAnalyzer;
+//import org.apache.lucene.analysis.lv.LatvianAnalyzer;
+//import org.apache.lucene.analysis.nl.DutchAnalyzer;
+//import org.apache.lucene.analysis.no.NorwegianAnalyzer;
+//import org.apache.lucene.analysis.pt.PortugueseAnalyzer;
+//import org.apache.lucene.analysis.ro.RomanianAnalyzer;
+//import org.apache.lucene.analysis.ru.RussianAnalyzer;
+//import org.apache.lucene.analysis.sv.SwedishAnalyzer;
+//import org.apache.lucene.analysis.th.ThaiAnalyzer;
 import org.apache.lucene.analysis.tokenattributes.CharTermAttribute;
-import org.apache.lucene.analysis.tr.TurkishAnalyzer;
+//import org.apache.lucene.analysis.tr.TurkishAnalyzer;
 import org.apache.lucene.analysis.util.CharArraySet;
 import org.apache.lucene.util.Version;
 
@@ -119,37 +119,37 @@ public class Analysis {
     }
 
     public static final ImmutableMap<String, Set<?>> namedStopWords = MapBuilder.<String, Set<?>>newMapBuilder()
-            .put("_arabic_", ArabicAnalyzer.getDefaultStopSet())
-            .put("_armenian_", ArmenianAnalyzer.getDefaultStopSet())
-            .put("_basque_", BasqueAnalyzer.getDefaultStopSet())
-            .put("_brazilian_", BrazilianAnalyzer.getDefaultStopSet())
-            .put("_bulgarian_", BulgarianAnalyzer.getDefaultStopSet())
-            .put("_catalan_", CatalanAnalyzer.getDefaultStopSet())
-            .put("_czech_", CzechAnalyzer.getDefaultStopSet())
-            .put("_danish_", DanishAnalyzer.getDefaultStopSet())
-            .put("_dutch_", DutchAnalyzer.getDefaultStopSet())
+//            .put("_arabic_", ArabicAnalyzer.getDefaultStopSet())
+//            .put("_armenian_", ArmenianAnalyzer.getDefaultStopSet())
+//            .put("_basque_", BasqueAnalyzer.getDefaultStopSet())
+//            .put("_brazilian_", BrazilianAnalyzer.getDefaultStopSet())
+//            .put("_bulgarian_", BulgarianAnalyzer.getDefaultStopSet())
+//            .put("_catalan_", CatalanAnalyzer.getDefaultStopSet())
+//            .put("_czech_", CzechAnalyzer.getDefaultStopSet())
+//            .put("_danish_", DanishAnalyzer.getDefaultStopSet())
+//            .put("_dutch_", DutchAnalyzer.getDefaultStopSet())
             .put("_english_", EnglishAnalyzer.getDefaultStopSet())
-            .put("_finnish_", FinnishAnalyzer.getDefaultStopSet())
-            .put("_french_", FrenchAnalyzer.getDefaultStopSet())
-            .put("_galician_", GalicianAnalyzer.getDefaultStopSet())
-            .put("_german_", GermanAnalyzer.getDefaultStopSet())
-            .put("_greek_", GreekAnalyzer.getDefaultStopSet())
-            .put("_hindi_", HindiAnalyzer.getDefaultStopSet())
-            .put("_hungarian_", HungarianAnalyzer.getDefaultStopSet())
-            .put("_indonesian_", IndonesianAnalyzer.getDefaultStopSet())
-            .put("_irish_", IrishAnalyzer.getDefaultStopSet())
-            .put("_italian_", ItalianAnalyzer.getDefaultStopSet())
-            .put("_latvian_", LatvianAnalyzer.getDefaultStopSet())
-            .put("_norwegian_", NorwegianAnalyzer.getDefaultStopSet())
-            .put("_persian_", PersianAnalyzer.getDefaultStopSet())
-            .put("_portuguese_", PortugueseAnalyzer.getDefaultStopSet())
-            .put("_romanian_", RomanianAnalyzer.getDefaultStopSet())
-            .put("_russian_", RussianAnalyzer.getDefaultStopSet())
-            .put("_sorani_", SoraniAnalyzer.getDefaultStopSet())
-            .put("_spanish_", SpanishAnalyzer.getDefaultStopSet())
-            .put("_swedish_", SwedishAnalyzer.getDefaultStopSet())
-            .put("_thai_", ThaiAnalyzer.getDefaultStopSet())
-            .put("_turkish_", TurkishAnalyzer.getDefaultStopSet())
+//            .put("_finnish_", FinnishAnalyzer.getDefaultStopSet())
+//            .put("_french_", FrenchAnalyzer.getDefaultStopSet())
+//            .put("_galician_", GalicianAnalyzer.getDefaultStopSet())
+//            .put("_german_", GermanAnalyzer.getDefaultStopSet())
+//            .put("_greek_", GreekAnalyzer.getDefaultStopSet())
+//            .put("_hindi_", HindiAnalyzer.getDefaultStopSet())
+//            .put("_hungarian_", HungarianAnalyzer.getDefaultStopSet())
+//            .put("_indonesian_", IndonesianAnalyzer.getDefaultStopSet())
+//            .put("_irish_", IrishAnalyzer.getDefaultStopSet())
+//            .put("_italian_", ItalianAnalyzer.getDefaultStopSet())
+//            .put("_latvian_", LatvianAnalyzer.getDefaultStopSet())
+//            .put("_norwegian_", NorwegianAnalyzer.getDefaultStopSet())
+//            .put("_persian_", PersianAnalyzer.getDefaultStopSet())
+//            .put("_portuguese_", PortugueseAnalyzer.getDefaultStopSet())
+//            .put("_romanian_", RomanianAnalyzer.getDefaultStopSet())
+//            .put("_russian_", RussianAnalyzer.getDefaultStopSet())
+//            .put("_sorani_", SoraniAnalyzer.getDefaultStopSet())
+//            .put("_spanish_", SpanishAnalyzer.getDefaultStopSet())
+//            .put("_swedish_", SwedishAnalyzer.getDefaultStopSet())
+//            .put("_thai_", ThaiAnalyzer.getDefaultStopSet())
+//            .put("_turkish_", TurkishAnalyzer.getDefaultStopSet())
             .immutableMap();
 
     public static CharArraySet parseWords(Environment env, Settings settings, String name, CharArraySet defaultWords, Map<String, Set<?>> namedWords, boolean ignoreCase) {

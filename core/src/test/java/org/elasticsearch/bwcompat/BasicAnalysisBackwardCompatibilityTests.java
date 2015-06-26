@@ -109,9 +109,9 @@ public class BasicAnalysisBackwardCompatibilityTests extends ElasticsearchBackwa
     private String randomAnalyzer() {
         while(true) {
             PreBuiltAnalyzers preBuiltAnalyzers = RandomPicks.randomFrom(getRandom(), PreBuiltAnalyzers.values());
-            if (preBuiltAnalyzers == PreBuiltAnalyzers.SORANI && compatibilityVersion().before(Version.V_1_3_0)) {
-                continue; // SORANI was added in 1.3.0
-            }
+//            if (preBuiltAnalyzers == PreBuiltAnalyzers.SORANI && compatibilityVersion().before(Version.V_1_3_0)) {
+//                continue; // SORANI was added in 1.3.0
+//            }
             return preBuiltAnalyzers.name().toLowerCase(Locale.ROOT);
         }
 

@@ -477,8 +477,8 @@ public class AnalysisModule extends AbstractModule {
 
         @Override
         public void processTokenFilters(TokenFiltersBindings tokenFiltersBindings) {
-            tokenFiltersBindings.processTokenFilter("snowball", SnowballTokenFilterFactory.class);
-            tokenFiltersBindings.processTokenFilter("stemmer", StemmerTokenFilterFactory.class);
+//            tokenFiltersBindings.processTokenFilter("snowball", SnowballTokenFilterFactory.class);
+//            tokenFiltersBindings.processTokenFilter("stemmer", StemmerTokenFilterFactory.class);
             tokenFiltersBindings.processTokenFilter("word_delimiter", WordDelimiterTokenFilterFactory.class);
             tokenFiltersBindings.processTokenFilter("delimited_payload_filter", DelimitedPayloadTokenFilterFactory.class);
             tokenFiltersBindings.processTokenFilter("synonym", SynonymTokenFilterFactory.class);
@@ -491,32 +491,32 @@ public class AnalysisModule extends AbstractModule {
             tokenFiltersBindings.processTokenFilter("dictionary_decompounder", DictionaryCompoundWordTokenFilterFactory.class);
             tokenFiltersBindings.processTokenFilter("hyphenation_decompounder", HyphenationCompoundWordTokenFilterFactory.class);
 
-            tokenFiltersBindings.processTokenFilter("arabic_stem", ArabicStemTokenFilterFactory.class);
-            tokenFiltersBindings.processTokenFilter("brazilian_stem", BrazilianStemTokenFilterFactory.class);
-            tokenFiltersBindings.processTokenFilter("czech_stem", CzechStemTokenFilterFactory.class);
-            tokenFiltersBindings.processTokenFilter("dutch_stem", DutchStemTokenFilterFactory.class);
-            tokenFiltersBindings.processTokenFilter("french_stem", FrenchStemTokenFilterFactory.class);
-            tokenFiltersBindings.processTokenFilter("german_stem", GermanStemTokenFilterFactory.class);
-            tokenFiltersBindings.processTokenFilter("russian_stem", RussianStemTokenFilterFactory.class);
+//            tokenFiltersBindings.processTokenFilter("arabic_stem", ArabicStemTokenFilterFactory.class);
+//            tokenFiltersBindings.processTokenFilter("brazilian_stem", BrazilianStemTokenFilterFactory.class);
+//            tokenFiltersBindings.processTokenFilter("czech_stem", CzechStemTokenFilterFactory.class);
+//            tokenFiltersBindings.processTokenFilter("dutch_stem", DutchStemTokenFilterFactory.class);
+//            tokenFiltersBindings.processTokenFilter("french_stem", FrenchStemTokenFilterFactory.class);
+//            tokenFiltersBindings.processTokenFilter("german_stem", GermanStemTokenFilterFactory.class);
+//            tokenFiltersBindings.processTokenFilter("russian_stem", RussianStemTokenFilterFactory.class);
 
             tokenFiltersBindings.processTokenFilter("keyword_marker", KeywordMarkerTokenFilterFactory.class);
             tokenFiltersBindings.processTokenFilter("stemmer_override", StemmerOverrideTokenFilterFactory.class);
 
-            tokenFiltersBindings.processTokenFilter("arabic_normalization", ArabicNormalizationFilterFactory.class);
-            tokenFiltersBindings.processTokenFilter("german_normalization", GermanNormalizationFilterFactory.class);
-            tokenFiltersBindings.processTokenFilter("hindi_normalization", HindiNormalizationFilterFactory.class);
-            tokenFiltersBindings.processTokenFilter("indic_normalization", IndicNormalizationFilterFactory.class);
-            tokenFiltersBindings.processTokenFilter("sorani_normalization", SoraniNormalizationFilterFactory.class);
-            tokenFiltersBindings.processTokenFilter("persian_normalization", PersianNormalizationFilterFactory.class);
-            tokenFiltersBindings.processTokenFilter("scandinavian_normalization", ScandinavianNormalizationFilterFactory.class);
-            tokenFiltersBindings.processTokenFilter("scandinavian_folding", ScandinavianFoldingFilterFactory.class);
-            tokenFiltersBindings.processTokenFilter("serbian_normalization", SerbianNormalizationFilterFactory.class);
+//            tokenFiltersBindings.processTokenFilter("arabic_normalization", ArabicNormalizationFilterFactory.class);
+//            tokenFiltersBindings.processTokenFilter("german_normalization", GermanNormalizationFilterFactory.class);
+//            tokenFiltersBindings.processTokenFilter("hindi_normalization", HindiNormalizationFilterFactory.class);
+//            tokenFiltersBindings.processTokenFilter("indic_normalization", IndicNormalizationFilterFactory.class);
+//            tokenFiltersBindings.processTokenFilter("sorani_normalization", SoraniNormalizationFilterFactory.class);
+//            tokenFiltersBindings.processTokenFilter("persian_normalization", PersianNormalizationFilterFactory.class);
+//            tokenFiltersBindings.processTokenFilter("scandinavian_normalization", ScandinavianNormalizationFilterFactory.class);
+//            tokenFiltersBindings.processTokenFilter("scandinavian_folding", ScandinavianFoldingFilterFactory.class);
+//            tokenFiltersBindings.processTokenFilter("serbian_normalization", SerbianNormalizationFilterFactory.class);
 
-            tokenFiltersBindings.processTokenFilter("hunspell", HunspellTokenFilterFactory.class);
-            tokenFiltersBindings.processTokenFilter("cjk_bigram", CJKBigramFilterFactory.class);
-            tokenFiltersBindings.processTokenFilter("cjk_width", CJKWidthFilterFactory.class);
-            
-            tokenFiltersBindings.processTokenFilter("apostrophe", ApostropheFilterFactory.class);
+//            tokenFiltersBindings.processTokenFilter("hunspell", HunspellTokenFilterFactory.class);
+//            tokenFiltersBindings.processTokenFilter("cjk_bigram", CJKBigramFilterFactory.class);
+//            tokenFiltersBindings.processTokenFilter("cjk_width", CJKWidthFilterFactory.class);
+//            
+//            tokenFiltersBindings.processTokenFilter("apostrophe", ApostropheFilterFactory.class);
             tokenFiltersBindings.processTokenFilter("classic", ClassicFilterFactory.class);
 
 
@@ -532,41 +532,41 @@ public class AnalysisModule extends AbstractModule {
         @Override
         public void processAnalyzers(AnalyzersBindings analyzersBindings) {
             analyzersBindings.processAnalyzer("pattern", PatternAnalyzerProvider.class);
-            analyzersBindings.processAnalyzer("snowball", SnowballAnalyzerProvider.class);
-
-            analyzersBindings.processAnalyzer("arabic", ArabicAnalyzerProvider.class);
-            analyzersBindings.processAnalyzer("armenian", ArmenianAnalyzerProvider.class);
-            analyzersBindings.processAnalyzer("basque", BasqueAnalyzerProvider.class);
-            analyzersBindings.processAnalyzer("brazilian", BrazilianAnalyzerProvider.class);
-            analyzersBindings.processAnalyzer("bulgarian", BulgarianAnalyzerProvider.class);
-            analyzersBindings.processAnalyzer("catalan", CatalanAnalyzerProvider.class);
+//            analyzersBindings.processAnalyzer("snowball", SnowballAnalyzerProvider.class);
+//
+//            analyzersBindings.processAnalyzer("arabic", ArabicAnalyzerProvider.class);
+//            analyzersBindings.processAnalyzer("armenian", ArmenianAnalyzerProvider.class);
+//            analyzersBindings.processAnalyzer("basque", BasqueAnalyzerProvider.class);
+//            analyzersBindings.processAnalyzer("brazilian", BrazilianAnalyzerProvider.class);
+//            analyzersBindings.processAnalyzer("bulgarian", BulgarianAnalyzerProvider.class);
+//            analyzersBindings.processAnalyzer("catalan", CatalanAnalyzerProvider.class);
             analyzersBindings.processAnalyzer("chinese", ChineseAnalyzerProvider.class);
-            analyzersBindings.processAnalyzer("cjk", CjkAnalyzerProvider.class);
-            analyzersBindings.processAnalyzer("czech", CzechAnalyzerProvider.class);
-            analyzersBindings.processAnalyzer("danish", DanishAnalyzerProvider.class);
-            analyzersBindings.processAnalyzer("dutch", DutchAnalyzerProvider.class);
+//            analyzersBindings.processAnalyzer("cjk", CjkAnalyzerProvider.class);
+//            analyzersBindings.processAnalyzer("czech", CzechAnalyzerProvider.class);
+//            analyzersBindings.processAnalyzer("danish", DanishAnalyzerProvider.class);
+//            analyzersBindings.processAnalyzer("dutch", DutchAnalyzerProvider.class);
             analyzersBindings.processAnalyzer("english", EnglishAnalyzerProvider.class);
-            analyzersBindings.processAnalyzer("finnish", FinnishAnalyzerProvider.class);
-            analyzersBindings.processAnalyzer("french", FrenchAnalyzerProvider.class);
-            analyzersBindings.processAnalyzer("galician", GalicianAnalyzerProvider.class);
-            analyzersBindings.processAnalyzer("german", GermanAnalyzerProvider.class);
-            analyzersBindings.processAnalyzer("greek", GreekAnalyzerProvider.class);
-            analyzersBindings.processAnalyzer("hindi", HindiAnalyzerProvider.class);
-            analyzersBindings.processAnalyzer("hungarian", HungarianAnalyzerProvider.class);
-            analyzersBindings.processAnalyzer("indonesian", IndonesianAnalyzerProvider.class);
-            analyzersBindings.processAnalyzer("irish", IrishAnalyzerProvider.class);
-            analyzersBindings.processAnalyzer("italian", ItalianAnalyzerProvider.class);
-            analyzersBindings.processAnalyzer("latvian", LatvianAnalyzerProvider.class);
-            analyzersBindings.processAnalyzer("norwegian", NorwegianAnalyzerProvider.class);
-            analyzersBindings.processAnalyzer("persian", PersianAnalyzerProvider.class);
-            analyzersBindings.processAnalyzer("portuguese", PortugueseAnalyzerProvider.class);
-            analyzersBindings.processAnalyzer("romanian", RomanianAnalyzerProvider.class);
-            analyzersBindings.processAnalyzer("russian", RussianAnalyzerProvider.class);
-            analyzersBindings.processAnalyzer("sorani", SoraniAnalyzerProvider.class);
-            analyzersBindings.processAnalyzer("spanish", SpanishAnalyzerProvider.class);
-            analyzersBindings.processAnalyzer("swedish", SwedishAnalyzerProvider.class);
-            analyzersBindings.processAnalyzer("turkish", TurkishAnalyzerProvider.class);
-            analyzersBindings.processAnalyzer("thai", ThaiAnalyzerProvider.class);
+//            analyzersBindings.processAnalyzer("finnish", FinnishAnalyzerProvider.class);
+//            analyzersBindings.processAnalyzer("french", FrenchAnalyzerProvider.class);
+//            analyzersBindings.processAnalyzer("galician", GalicianAnalyzerProvider.class);
+//            analyzersBindings.processAnalyzer("german", GermanAnalyzerProvider.class);
+//            analyzersBindings.processAnalyzer("greek", GreekAnalyzerProvider.class);
+//            analyzersBindings.processAnalyzer("hindi", HindiAnalyzerProvider.class);
+//            analyzersBindings.processAnalyzer("hungarian", HungarianAnalyzerProvider.class);
+//            analyzersBindings.processAnalyzer("indonesian", IndonesianAnalyzerProvider.class);
+//            analyzersBindings.processAnalyzer("irish", IrishAnalyzerProvider.class);
+//            analyzersBindings.processAnalyzer("italian", ItalianAnalyzerProvider.class);
+//            analyzersBindings.processAnalyzer("latvian", LatvianAnalyzerProvider.class);
+//            analyzersBindings.processAnalyzer("norwegian", NorwegianAnalyzerProvider.class);
+//            analyzersBindings.processAnalyzer("persian", PersianAnalyzerProvider.class);
+//            analyzersBindings.processAnalyzer("portuguese", PortugueseAnalyzerProvider.class);
+//            analyzersBindings.processAnalyzer("romanian", RomanianAnalyzerProvider.class);
+//            analyzersBindings.processAnalyzer("russian", RussianAnalyzerProvider.class);
+//            analyzersBindings.processAnalyzer("sorani", SoraniAnalyzerProvider.class);
+//            analyzersBindings.processAnalyzer("spanish", SpanishAnalyzerProvider.class);
+//            analyzersBindings.processAnalyzer("swedish", SwedishAnalyzerProvider.class);
+//            analyzersBindings.processAnalyzer("turkish", TurkishAnalyzerProvider.class);
+//            analyzersBindings.processAnalyzer("thai", ThaiAnalyzerProvider.class);
         }
     }
 }
